@@ -5,7 +5,6 @@ import 'ant-design-vue/dist/antd.css'
 
 import VueFormWizard from 'vue-form-wizard'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
-
 import { router } from './routes/index.js';
 
 Vue.config.productionTip = false

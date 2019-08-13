@@ -1,8 +1,11 @@
 <template>
     <div class="header">
-        <a href="#default" class="logo">CoP Client</a>
+        <a href="#default" class="logo">KB CoP Client</a>
         <div class="icons-list">
-            <a-icon type="info-circle" />
+            <a-badge count="15" style= "float:right; margin-right: 12px;margin-top: 6px;">
+            <a-icon type="ellipsis" />
+  
+            </a-badge>
         </div>
     </div>
 </template>
@@ -23,7 +26,7 @@ export default {
   padding: 15px 15px;
 }
 .icons-list >>> .anticon {
-  /* margin-right: 6px; */
+  margin-right: 10px;
   font-size: 30px;
   float: right;
   padding-top:5px;
