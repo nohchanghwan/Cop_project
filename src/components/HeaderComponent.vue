@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <a href="#default" class="logo">KB CoP Client</a>
+        <a href="#default" class="logo">CoP_client</a>
         <div class="icons-list">
             <a-badge count="15" style= "float:right; margin-right: 12px;margin-top: 6px;">
             <a-icon type="ellipsis" />

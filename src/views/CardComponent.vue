@@ -8,22 +8,19 @@
             <div class="steps-action">
             <a-button
                 v-if="current < steps.length - 1"
-                type="primary" @click="next"
-            >
+                type="primary" @click="next">
                 다음으로
             </a-button>
             <a-button
                 v-if="current == steps.length - 1"
                 type="primary"
-                @click="$message.success('Processing complete!')"
-            >
+                @click="$message.success('Processing complete!')">
                 작성완료
             </a-button>
             <a-button
                 v-if="current>0"
                 style="margin-left: 8px"
-                @click="prev"
-            >
+                @click="prev">
                 이전으로
             </a-button>
             </div>
