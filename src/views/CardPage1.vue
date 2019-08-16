@@ -48,9 +48,10 @@ export default {
         MyTabComponent4,
     },
     methods: {
-      onComplete: function(){
-          alert('제출쓰~');
+        onComplete: function(){
+            alert('요청내용이 제출되었습니다!');
         }
+        // Axios로 비동기통신 추가
     }
 }
 </script>
@@ -59,15 +60,15 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap');
 .cards {
     /* background-color: blue; */
-    color: black;
+    background-color: rgb(234, 234, 247);
     text-align: center;
     padding: 12px;
     height: 40rem;
 }
 .acard {
-  box-shadow: 5px 12px 13px rgba(0,0,0,0.16), 0 12px 13px rgba(0,0,0,0.16);
-  border-radius: 10px;
-  height: 33rem;
+    box-shadow: 5px 12px 13px rgba(0,0,0,0.16), 0 12px 13px rgba(0,0,0,0.16);
+    border-radius: 10px;
+    height: 33rem;
 }
 
 </style>

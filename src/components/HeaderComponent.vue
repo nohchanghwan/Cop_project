@@ -22,7 +22,7 @@ export default {
 
 .header {
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(234, 234, 247);
   padding: 15px 15px;
 }
 .icons-list >>> .anticon {
