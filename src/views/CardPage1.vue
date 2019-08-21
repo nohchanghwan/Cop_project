@@ -14,7 +14,7 @@
                 <tab-content title="지역선택" >
                     <my-tab-component1></my-tab-component1>
                 </tab-content>
-                <tab-content title="고객정보입력" style="padding:0px">
+                <tab-content title="고객정보입력">
                     <my-tab-component2></my-tab-component2>
                 </tab-content>
                 <tab-content title="카드정보입력">
