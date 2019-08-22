@@ -11,7 +11,4 @@ export default {
 </script>
 
 <style>
-.tab{
-  height: 17rem;
-}
 </style>

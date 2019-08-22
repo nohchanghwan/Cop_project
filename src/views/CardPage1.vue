@@ -1,7 +1,8 @@
 <template>
     <div class="cards">
         <a-card class="acard" body="Card title" :bordered="false" height='20rem'>
-            <form-wizard color="#F8AA1F" @on-complete="onComplete"
+            <form-wizard color="#F8AA1F" 
+                        @on-complete="onComplete"
                         subtitle=""
                         back-button-text="이전"
                         next-button-text="다음"
@@ -12,13 +13,35 @@
 
                 <!-- 스텝별 컴포넌트 -->
                 <tab-content title="지역선택" >
-                    <my-tab-component1></my-tab-component1>
+                    <a-input placeholder="이름을 입력하세요" v-model="newUser"/>
+                    <a-input placeholder="이름을 입력하세요" v-model="newUser2"/>
+
+                    <!-- <my-tab-component1></my-tab-component1> -->
                 </tab-content>
                 <tab-content title="고객정보입력" style="padding:0px">
-                    <my-tab-component2></my-tab-component2>
+                    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+                    <label for="jack">Jack</label>
+                    <input type="checkbox" id="john" value="John" v-model="checkedNames">
+                    <label for="john">John</label>
+                    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+                    <label for="mike">Mike</label>
+                    <br><br>
+                    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames2">
+                    <label for="jack">Jack</label>
+                    <input type="checkbox" id="john" value="John" v-model="checkedNames2">
+                    <label for="john">John</label>
+                    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames2">
+                    <label for="mike">Mike</label>                         
+                    <!-- <my-tab-component2></my-tab-component2> -->
                 </tab-content>
                 <tab-content title="카드정보입력">
-                    <my-tab-component3></my-tab-component3>
+                    <input type="radio" id="one" value="One" v-model="picked">
+                    <label for="one">One</label>
+                    <br>
+                    <input type="radio" id="two" value="Two" v-model="picked">
+                    <label for="two">Two</label>
+                    <br>
+                    <!-- <my-tab-component3></my-tab-component3> -->
                 </tab-content>
                 <tab-content title="연결정보선택">
                     <my-tab-component4></my-tab-component4>
@@ -29,6 +52,9 @@
 </template>
 
 <script>
+import { submitInfo } from '../api/index.js';
+import axios from 'axios';
+
 
 import { FormWizard, TabContent } from 'vue-form-wizard'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
@@ -47,9 +73,34 @@ export default {
         MyTabComponent3,
         MyTabComponent4,
     },
+
+    data() {
+        return {
+        newUser:"",
+        newUser2:"",
+        checkedNames: [],
+        checkedNames2: [],
+        picked: []
+        
+        // provinceData,
+        // cityData,
+        // cities: cityData[provinceData[0]],
+        // secondCity: cityData[provinceData[0]][0],
+        }
+    },
+
     methods: {
-      onComplete: function(){
-          alert('제출쓰~');
+        onComplete: function(){
+            alert('제출쓰~');
+            axios.post('/api', 
+            { newUser:this.newUser, newUser2:this.newUser2,checkedNames:this.checkedNames, checkedNames2:this.checkedNames2,picked:this.picked  }
+            ).then(response => {
+                console.warn(response)
+                this.result = response.data
+                this.no = response.data.no
+            }).catch((ex) => {
+                console.warn("ERROR!!!!! : ",ex)
+            })
         }
     }
 }
