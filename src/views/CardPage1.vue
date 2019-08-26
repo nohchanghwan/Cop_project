@@ -81,20 +81,36 @@ export default {
         checkedNames: [],
         checkedNames2: [],
         picked: []
-        
-        // provinceData,
-        // cityData,
-        // cities: cityData[provinceData[0]],
-        // secondCity: cityData[provinceData[0]][0],
+
+        // users: [
+        //     newUser,
+        //     newUser2,
+        //     checkedNames,
+        //     checkedNames2,
+        //     picked
+        // ]
         }
     },
 
+    // methods: {
+    //     onComplete: function(){
+    //         alert('제출쓰~');
+    //         axios.post('/api', 
+    //         { newUser:this.newUser, newUser2:this.newUser2,checkedNames:this.checkedNames, checkedNames2:this.checkedNames2,picked:this.picked  }
+    //         ).then(response => {
+    //             console.warn(response)
+    //             this.result = response.data
+    //             this.no = response.data.no
+    //         }).catch((ex) => {
+    //             console.warn("ERROR!!!!! : ",ex)
+    //         })
+    //     }
+    // }
     methods: {
         onComplete: function(){
             alert('제출쓰~');
-            axios.post('/api', 
-            { newUser:this.newUser, newUser2:this.newUser2,checkedNames:this.checkedNames, checkedNames2:this.checkedNames2,picked:this.picked  }
-            ).then(response => {
+            axios.post('/api', users) 
+            .then(response => {
                 console.warn(response)
                 this.result = response.data
                 this.no = response.data.no
@@ -103,6 +119,20 @@ export default {
             })
         }
     }
+    // methods:{
+    //     onComplete: function(){
+    //         alert('서버로전송');
+    //         //API모듈로넘김 submitInfo
+    //         submitInfo(users)
+    //         .then(response => {
+    //             console.warn(response)
+    //             this.result = response.data
+    //             this.no = response.data.no
+    //         }).catch((ex) => {
+    //             console.warn("에러발생: ",ex)
+    //         })
+    //         }
+    // }    
 }
 </script>
 
@@ -110,7 +140,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap');
 .cards {
     /* background-color: blue; */
-    color: black;
+    background-color: rgb(234, 234, 247);
     text-align: center;
     padding: 12px;
     height: 40rem;
