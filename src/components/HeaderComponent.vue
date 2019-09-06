@@ -1,20 +1,50 @@
 <template>
-    <div class="header">
-        <a href="#default" class="logo">CoP_client</a>
-        <div class="icons-list">
+    <div class="header" style ="font-family: 'NIXGONM-Vb'">
+        <!-- <a href="/" class="logo">CoP_client</a> -->
+        <!-- <img  src="../assets/headerlogo.png" WIDTH=110 HEIGHT=70 href="/" > -->
+        <!-- <img  class = "icons-list" src="../assets/headerlogo.png"> -->
+        <div class="icons-list" >
+            <a href="/" style = "padding:0px">
+              <img src="../assets/headerlogo2.png">
+            </a>
             <a-badge count="15" style= "float:right; margin-right: 12px;margin-top: 6px;">
-            <a-icon type="ellipsis" />
-  
+            <a-icon type="ellipsis" @click="showDrawer" />
             </a-badge>
+            <a-drawer
+              title="사용자설정"
+              placement="right"
+              :closable="false"
+              @close="onClose"
+              :visible="visible"
+            >
+              <my-tab-component4></my-tab-component4>
+            </a-drawer>
         </div>
     </div>
 </template>
 
 <script>
 import { Icon } from 'ant-design-vue'
+import MyTabComponent4 from '../views/MyTabComponent4.vue'
 
 export default {
-    name: 'HeaderComponent'
+    components: {
+      MyTabComponent4
+    },
+    name: 'HeaderComponent',
+    data() {
+      return {
+        visible: false,
+      }
+    },
+    methods: {
+    showDrawer() {
+      this.visible = true
+    },
+    onClose() {
+      this.visible = false
+    },
+  },
 }
 </script>
 

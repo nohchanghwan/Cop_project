@@ -8,8 +8,8 @@ import axios from 'axios';
 
 
 //2.API 함수들 정리
-function submitInfo(users) {
-        return axios.post('/api', users)
+function submitInfo(userInfo) {
+        return axios.post('/api', userInfo)
 }
 
 export {

@@ -1,5 +1,5 @@
 <template>
-    <div class="tab">
+    <div class="tab" style ="font-family: 'NIXGONM-Vb'">
         ※매칭 후 연결정보 선택
         <a-row>
         <a-col :span="18"><h6>전화수신받기(안심번호)</h6></a-col>
@@ -35,5 +35,7 @@ export default {
 </script>
 
 <style>
-
 </style>
+
+
+
