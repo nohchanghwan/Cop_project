@@ -13,21 +13,20 @@
             </a>
             </div>
             <br><br><br><br><br><br>
-
             <br><br><br><br><br><br>
 
             <div class="selectPage" id="test">
             <a-card title="카드상품" class="card" headStyle="font-size:25px; padding-top:25px;">
-                <a href="/cardpage1" slot="extra" style="font-size:20px;">확인하기 ></a>
+                <a href="/card" slot="extra" style="font-size:20px;">확인하기 ></a>
             </a-card>
             <a-card title="보험상품" class="card" headStyle="font-size:25px; padding-top:25px;" >
-                <a href="/cardpage1" slot="extra" style="font-size:20px">확인하기 ></a>
+                <a href="/card" slot="extra" style="font-size:20px">확인하기 ></a>
             </a-card>
             <a-card title="투자상품" class="card" headStyle="font-size:25px; padding-top:25px;">
-                <a href="/cardpage1" slot="extra" style="font-size:20px">확인하기 ></a>
+                <a href="/card" slot="extra" style="font-size:20px">확인하기 ></a>
             </a-card>
             <a-card title="대출상품" class="card" headStyle="font-size:25px; padding-top:25px;">
-                <a href="/cardpage1" slot="extra" style="font-size:20px">확인하기 ></a>
+                <a href="/card" slot="extra" style="font-size:20px">확인하기 ></a>
             </a-card>
             
             

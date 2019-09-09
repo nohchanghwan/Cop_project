@@ -2,19 +2,19 @@
   <div class="main" id="app">
     <HeaderComponent></HeaderComponent>
     <router-view></router-view>
-    <!-- <FooterComponent></FooterComponent> -->
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
-//import FooterComponent from './components/FooterComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default {
   name: 'app',
   components: {
     HeaderComponent,
-    // FooterComponent
+    FooterComponent
   }
 }
 </script>
